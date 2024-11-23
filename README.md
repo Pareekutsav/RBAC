@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+# Admin Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Admin Dashboard is a **React.js** application designed to manage users, roles, and permissions efficiently. This application is built with **Material-UI** for a modern and responsive design and implements a comprehensive Role-Based Access Control (RBAC) system.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Key Features
 
-### `npm start`
+### User Management
+- **View Users**: Display all users in a table view with detailed information.
+- **Add/Edit/Delete Users**: Easily manage user details with action buttons.
+- **Assign Roles**: Dynamically assign roles to users.
+- **Manage Status**: Toggle user status between Active and Inactive.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Role Management
+- **Create Roles**: Add new roles with desired attributes.
+- **Edit Roles**: Modify role details dynamically.
+- **Role Permissions**: Assign permissions such as Read, Write, or Delete to roles.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Permission Management
+- **Dynamic Permissions**: Assign and update permissions for roles with an intuitive UI.
+- **Clear Layout**: Clearly display permissions for easy understanding.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technologies Used
 
-### `npm run build`
+- **Frontend Framework**: React.js
+- **UI Library**: Material-UI
+- **Mock API**: Simulated backend responses for CRUD operations
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Make sure the following are installed:
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- npm (comes with Node.js) or yarn
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation and Setup
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+git clone https://github.com/Pareekutsav/RBAC.git
+cd RBAC
+npm install
+npm start
+```
+Open your browser and navigate to:
+```http://localhost:3000```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Directory Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+RBAC/
+├── public/                            # Static files
+│   ├── screenshots/
+│   │   ├── dashboard-view.png
+│   │   ├── user-management.png
+│   │   └── role-management.png 
+│   └── mock/
+│       └── db.json                    # User and Roles JSON
+├── src/
+│   ├── components/                    # Reusable UI components (Tables, Modals, etc.)
+│   │    ├── RoleManagement/           # Role and Permission management
+|   │    │   ├── RoleForm.js
+│   │    │   ├── RoleManagememt.js
+│   │    │   └── RoleTable.js
+│   │    ├── TableWithActions/         # Reusable Table UI component
+│   │    │   └── index.js
+│   │    └── UserManagement/           # User and Status management
+|   │        ├── UserForm.js 
+│   │        ├── UserManagememt.js
+│   │        └── UserTable.js
+│   ├── App.js                         # Main application component
+│   ├── index.js                       # Application entry point
+│   └── index.css                      # Global and custom styles
+├── package-lock.json                  # Locked dependencies and scripts
+├── package.json                       # Dependencies and scripts
+└── README.md                          # Project documentation
+```
 
-## Learn More
+## Screenshots
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### User Table
+![User Table View](public/screenshots/UserManagement.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Add User
+![Add User Form](public/screenshots/AddUser.png)
 
-### Code Splitting
+### Role Management
+![Role Management View](public/screenshots/RoleManagement.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Add Role
+![Add Role Form](public/screenshots/RoleForm.png)

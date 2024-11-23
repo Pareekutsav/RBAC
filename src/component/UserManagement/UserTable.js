@@ -1,5 +1,5 @@
 import React from 'react';
-import TableWithActions from '../TableWithActions/indexx';
+import TableWithActions from '../TableWithActions/index';
 
 const UserTable = ({ users, onEdit, onDelete }) => {
   const columns = [
